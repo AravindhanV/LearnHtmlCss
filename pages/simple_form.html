@@ -122,6 +122,13 @@
         } else {
           passwordError.textContent = "Password Incorrect";
         }
+
+        passwordRegex = RegExp("^[A-Za-z0-9]*[^A-Za-z0-9][A-Za-z0-9]*$");
+        if (passwordRegex.test(password.value)) {
+          passwordError.textContent = "";
+        } else {
+          passwordError.textContent = "Password Incorrect";
+        }
       });
 
       const salary = document.querySelector("#salary");
