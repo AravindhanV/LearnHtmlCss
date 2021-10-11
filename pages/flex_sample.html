@@ -1,40 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="../css/flex_style.css" />
-  </head>
-  <body>
-    <header class="headerContainer"><h1>HEADER</h1></header>
-    <div class="mainContainer">
-      <section class="mainContentItem">
-        <article>
-          <h2>First Article</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
-            interdum nisi, in dignissim urna. Suspendisse potenti. Proin
-            pellentesque, turpis a tincidunt vulputate, nulla diam consectetur
-            mi, ut ultricies nunc lacus vitae leo. Sed mattis nibh sit amet
-            neque convallis, et fringilla est posuere.
-          </p>
-        </article>
-        <article>
-          <h2>Second Article</h2>
-          <p>
-            orem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            tellus tortor, faucibus sit amet felis et, pretium consequat dui.
-            Suspendisse non est luctus, volutpat eros in, porta magna. Maecenas
-            mattis ultrices leo, sed volutpat augue euismod eu. Nulla eget erat
-            tempor, imperdiet dolor ut, posuere tellus
-          </p>
-        </article>
-      </section>
-      <aside class="sideBarItem sideBarLeftItem">
-        <div class="center"><p>Left Item</p></div>
-      </aside>
-      <aside class="sideBarItem sideBarRightItem">
-        <div class="center"><p>Right Item</p></div>
-      </aside>
-    </div>
-    <footer class="footerContainer"></footer>
-  </body>
-</html>
+<!doctype html>
+<title>Example</title>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+    order: 1;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw;
+  }
+  #main > nav {
+    background: #D7E8D4;
+    order: 3;
+  }
+  #main > aside {
+    background: beige;
+    order: 2;
+  }
+  header, footer {
+    background: darkgoldenrod;
+    height: 20vh;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+</style>
+<body>
+  <header><h1 style="text-align: center;">Bridge Labz is cool!</h1></header>
+  <div id="main">
+    <article>
+        <img src="../assets/BL_logo_square_jpg.jpg" alt="Hover Text" width = "25%">
+        <p> At BridgeLabz, we're a techie community of</p>
+        <ul>
+            <li>technologists</li>
+            <li>thinkers</li>
+            <li>builders</li>
+        </ul>
+        <p>Working togther to keep the tech Employability of Engineers alive and accessible, so Tech Companies worldwide can get
+           contributors and creators for Technology Solutions. We beleive this act of human collaboration across an Employability
+           platform is essential to individual growth and our collective future.</p>
+           <p> To know about us, visit <a href="https://www.bridgelabz.com/">BridgeLabz</a> to learn even more about our mission i.e
+              <strong>Employability to all</strong></p>
+
+    </article>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+  </div>
+  <footer>Footer</footer>
+</body>
